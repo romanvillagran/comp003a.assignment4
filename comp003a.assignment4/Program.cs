@@ -60,6 +60,25 @@ namespace comp003a.assignment4
                         Console.WriteLine("Product added.");
                         break;
 
+                    case 2:
+                        Console.Write("Enter product name to update: ");
+                        string updateName = Console.ReadLine();
+                        int index = Array.IndexOf(productName, updateName);
+
+                        if (index == 1)
+                        {
+                            Console.WriteLine("Product not found");
+                        }
+                        else
+                        {
+                            Console.Write("Enter new quantity");
+                            int newQuantity = int.Parse(Console.ReadLine());
+                            quantities[index] = newQuantity;
+                            Console.WriteLine("Quantity updated.");
+                        }
+                        break;
+
+
                 }
 
             }
