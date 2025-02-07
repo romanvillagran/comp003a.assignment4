@@ -129,6 +129,45 @@ namespace comp003a.assignment4
                 switch (option)
                 {
                     case 1:
+                        Console.Write("Enter product name");
+                        string name = Console.ReadLine();
+                        Console.Write("Enter product quantity: ");
+                        int quantity = int.Parse(Console.ReadLine());
+
+                        productNames.Add(name);
+                        quantities.Add(quantity);
+                        Console.WriteLine("Products added successfully");
+                        break;
+
+                    case 2:
+                        Console.Write("Enter product name to update: ");
+                        string updateName = Console.ReadLine();
+
+                        int index = productNames.IndexOf(updateName);
+
+                        if (index == -1)
+                        {
+                            Console.WriteLine("Product not found");
+                        }
+                        else
+                        {
+                            Console.Write("Enter new quantity");
+                            int newQuantity = int.Parse(Console.ReadLine());
+                            quantities[index] = newQuantity;
+                            Console.WriteLine("Quantity updated");
+                        }
+                        break;
+
+                    case 3:
+                        if (productNames.Count == 0)
+                        {
+                            Console.WriteLine("Inventory is empty");
+                            break;
+                        }
+
+                        int total = 0;
+                        Console.WriteLine("\nInventory summary");
+
 
                 }
             }
