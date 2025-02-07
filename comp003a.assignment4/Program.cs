@@ -10,6 +10,7 @@ namespace comp003a.assignment4
             Console.WriteLine("Choose your storage method: ");
             Console.WriteLine("1. Arrays");
             Console.WriteLine("2. Lists");
+
             int choice = int.Parse(Console.ReadLine());
 
             if (choice == 1)
@@ -108,6 +109,28 @@ namespace comp003a.assignment4
 
                 }
 
+            }
+        }
+        static void UseLists()
+        {
+            List<string> productNames = new List<string>();
+            List<int> quantities = new List<int>();
+
+            while (true)
+            {
+                Console.WriteLine("\n Menu: ");
+                Console.WriteLine("1. Add a product: ");
+                Console.WriteLine("2. Update rpoduct quantity: ");
+                Console.WriteLine("3. View inventory summary: ");
+                Console.WriteLine("4. Exit:");
+
+                int option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+
+                }
             }
         }
 
