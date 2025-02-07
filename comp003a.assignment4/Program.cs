@@ -15,7 +15,7 @@ namespace comp003a.assignment4
 
             if (choice == 1)
             {
-                UseArrays();
+                UseArrays(); 
             }
             else if (choice == 2)
             {
@@ -23,11 +23,11 @@ namespace comp003a.assignment4
             }
             else
             {
-                Console.WriteLine("Invalid choice.");
+              Console.WriteLine("Invalid choice. Exiting program."); 
             }
         }
 
-        static void UseArray()
+        static void UseArrays()
         {
             string[] productName = new string[10];
             int[] quantities = new int[10];
@@ -167,6 +167,25 @@ namespace comp003a.assignment4
 
                         int total = 0;
                         Console.WriteLine("\nInventory summary");
+
+                        for (int i = 0; i < productNames.Count; i++)
+                        {
+                            Console.WriteLine($"{productNames}: {quantities[i]}");
+                            total += quantities[i];
+                        }
+
+                        Console.WriteLine($"Total Number of products: {productNames.Count}");
+                        Console.WriteLine($"Total inventory quantity: {total}");
+                        Console.WriteLine($"Average product quantity: {total / (double)productNames.Count:F2}");
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Exiting program.");
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid option. Try again");
+                        break;
 
 
                 }
