@@ -78,6 +78,33 @@ namespace comp003a.assignment4
                         }
                         break;
 
+                    case 3:
+                        if (count == 0)
+                        {
+                            Console.WriteLine("Inventory is empty");
+                            break;
+                        }
+                        int total = 0;
+                        Console.WriteLine("\nInventory summary");
+                        for (int i = 0; i <count; i++)
+                        {
+                            Console.WriteLine($"{productName[i]}: {quantities[i]}");
+                            total += quantities[i];
+                        }
+
+                        Console.WriteLine($"Total number of Products: {count}");
+                        Console.WriteLine($"Total inventory quantity: {total}");
+                        Console.WriteLine($"Average product quantity: {total / (double)count:F2}");
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Exiting program.");
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid options. Try again.");
+                        break;
+
 
                 }
 
